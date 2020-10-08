@@ -1,0 +1,61 @@
+#include <iostream>
+#include "menu.h"
+/**
+ *  @author Ahmed YOUSFI
+ *  @abstract Class pour créer un comptebancaire
+ *  @date 8 Octobre 2020
+ */
+using namespace std;
+// Initialisation du menu
+enum CHOIX_MENU
+{
+    OPTION_1 = 1,
+    OPTION_2,
+    OPTION_3,
+    OPTION_4,
+    QUITTER
+};
+
+int main()
+{
+    // Initialisation du choix
+    int choix;
+    try{
+        // Afficher le fichier texte du dossier
+    Menu leMenu("compteBancaire.txt");
+    do {
+        choix = leMenu.Afficher();
+        // Faire son choix
+    switch (choix)
+    {
+    case OPTION_1:
+        cout << "Vous avez choisi l'option 1" << endl;
+        Menu::AttendreAppuiTouche();
+        break;
+
+    case OPTION_2:
+        cout << "Vous avez choisi l'option 2" << endl;
+        Menu::AttendreAppuiTouche();
+        break;
+
+    case OPTION_3:
+        cout << "Vous avez choisi l'option 3" << endl;
+        Menu::AttendreAppuiTouche();
+        break;
+
+    case OPTION_4:
+        cout << "Vous avez choisi l'option 4" << endl;
+        Menu::AttendreAppuiTouche();
+        break;
+    }
+    }
+
+
+
+    catch(Exception)
+    } while(choix!= QUITTER);
+
+
+
+    return 0;
+}
