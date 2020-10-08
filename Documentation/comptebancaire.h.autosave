@@ -1,0 +1,22 @@
+#ifndef COMPTEBANCAIRE_H
+#define COMPTEBANCAIRE_H
+
+/**
+ *  @author Ahmed YOUSFI
+ *  @abstract Class pour créer un comptebancaire
+ *  @date 8 Octobre 2020
+ */
+
+class CompteBancaire
+{
+public:
+    CompteBancaire(float _solde);
+   void Deposer(float _montant);
+   bool Retirer(float _montant);
+   float ConsulterSolde();
+
+protected:
+   float solde;
+};
+
+#endif // COMPTEBANCAIRE_H
